@@ -8,6 +8,8 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 
 const Service = ({service}) => {
     const {id, name, description, image} = service;
+
+    const url = `/delivery/${id}`;
     return (
         <Grid item xs={4} sm={4} md={4} >
 
@@ -29,9 +31,9 @@ const Service = ({service}) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-      <Button variant="contained" style={{margin: 'auto'}}>
-Buy Now
-</Button>
+     <a href={url} style={{margin: 'auto'}}> <Button variant="contained" >
+Booking Now
+</Button></a>
       </CardActions>
     </Card>
         </Grid>
